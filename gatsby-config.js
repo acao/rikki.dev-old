@@ -24,8 +24,9 @@ module.exports = {
   // Customize your site metadata:
   siteMetadata: {
     title: `The outputChannel`,
+    siteTitle: `The outputChannel | Rikki Schulte's development blog`,
     author: `Rikki Schulte`,
-    description: `My site description...`,
+    description: `The development blog for Rikki Schulte`,
     social: [
       {
         name: `twitter`,
