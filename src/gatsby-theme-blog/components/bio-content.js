@@ -1,16 +1,16 @@
 import React, { Fragment } from "react"
-import { Styled } from "theme-ui"
+import { Styled, IconButton } from "theme-ui"
 
 /**
  * Change the content to add your own bio
  */
 
-export default () => (
+export default ({ socialLinks }) => (
   <Fragment>
-    This is where <Styled.a href="http://example.com/">your name</Styled.a>
-    {` `}
-    goes.
+    The development blog of Rikki Schulte.
     <br />
-    Or whatever, you make the rules.
+    Gatsby.js pays me to make developer tools like GraphiQL and the GraphQL LSP
+    <br />
+    Black Lives Matter!
   </Fragment>
 )
