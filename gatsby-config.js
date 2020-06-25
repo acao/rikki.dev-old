@@ -2,29 +2,17 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-theme-blog`,
+      options: {
+        prismPreset: "prism-okaidia",
+      },
     },
-    // {
-    //   resolve: `gatsby-transformer-remark`,
-    //   options: {
-    //     plugins: [
-    //       {
-    //         resolve: `gatsby-remark-images`,
-    //         options: {
-    //           // It's important to specify the maxWidth (in pixels) of
-    //           // the content container as this plugin uses this as the
-    //           // base for generating different widths of each image.
-    //           maxWidth: 590,
-    //           linkImagesToOriginal: true,
-    //         },
-    //       },
-    //     ],
-    //   },
-    // },
+    "gatsby-theme-blog-darkmode",
   ],
   // Customize your site metadata:
   siteMetadata: {
     title: `The outputChannel`,
     siteTitle: `The outputChannel | Rikki Schulte's development blog`,
+    siteUrl: `https://rikki.dev`,
     author: `Rikki Schulte`,
     description: `The development blog for Rikki Schulte`,
     social: [

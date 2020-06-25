@@ -5,9 +5,10 @@ import React from "react"
 import { css, Styled } from "theme-ui"
 import Header from "./header"
 
+// @ts-ignore
 import bgImage from "../../../content/assets/tile.jpg"
 
-export default ({ children, ...props }) => (
+export default ({ children, location, title, ...props }) => (
   <Styled.root
     css={css({
       backgroundRepeat: "repeat",
@@ -28,7 +29,12 @@ export default ({ children, ...props }) => (
         paddingBottom: "4rem",
       }}
     >
-      <Header sx={{ backgroundColor: "background" }} {...props} />
+      <Header
+        location={location}
+        title={title}
+        sx={{ backgroundColor: "background" }}
+        children={null}
+      />
       <div>
         <div
           css={css({

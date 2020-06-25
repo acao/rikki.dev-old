@@ -19,7 +19,6 @@ const Bio = () => {
     },
     avatar,
   } = data
-  console.log({ social })
   return (
     <Flex css={css({ mb: 4, alignItems: `center` })}>
       {avatar ? (

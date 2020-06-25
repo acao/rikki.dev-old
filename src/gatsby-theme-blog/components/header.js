@@ -1,11 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import { css, useColorMode, Styled } from "theme-ui"
-import Switch from "gatsby-theme-blog/src/components/switch"
+import Switch from "gatsby-theme-blog-darkmode/src/components/switch"
 import Bio from "./bio"
-import sun from "gatsby-theme-blog/assets/sun.png"
-import moon from "gatsby-theme-blog/assets/moon.png"
+// @ts-ignore
+import sun from "gatsby-theme-blog-darkmode/assets/sun.png"
+// @ts-ignore
+import moon from "gatsby-theme-blog-darkmode/assets/moon.png"
 
+// @ts-ignore
 const rootPath = `${__PATH_PREFIX__}/`
 
 const Title = ({ children, location }) => {
@@ -65,6 +68,7 @@ const checkedIcon = (
     width="16"
     height="16"
     role="presentation"
+    // @ts-ignore
     css={iconCss}
   />
 )
@@ -76,14 +80,16 @@ const uncheckedIcon = (
     width="16"
     height="16"
     role="presentation"
+    // @ts-ignore
     css={iconCss}
   />
 )
 
-export default ({ children, title, ...props }) => {
+export default ({ children, title, location, ...props }) => {
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`
   const toggleColorMode = e => {
+    // @ts-ignore
     setColorMode(isDark ? `light` : `dark`)
   }
 
@@ -104,7 +110,9 @@ export default ({ children, title, ...props }) => {
             mb: 4,
           })}
         >
-          <Title {...props}>{title}</Title>
+          <Title location={location} {...props}>
+            {title}
+          </Title>
           {children}
           <Switch
             aria-label="Toggle dark mode"
@@ -114,7 +122,7 @@ export default ({ children, title, ...props }) => {
             onChange={toggleColorMode}
           />
         </div>
-        {props.location.pathname === rootPath && <Bio />}
+        {location.pathname === rootPath && <Bio />}
       </div>
     </header>
   )

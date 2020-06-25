@@ -5,7 +5,7 @@ import { Styled, IconButton } from "theme-ui"
  * Change the content to add your own bio
  */
 
-export default ({ socialLinks }) => (
+export default () => (
   <Fragment>
     The development blog of Rikki Schulte.
     <br />
