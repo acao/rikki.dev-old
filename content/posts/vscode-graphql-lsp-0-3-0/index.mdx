@@ -1,7 +1,7 @@
 ---
 title: Announcing VSCode GraphQL 0.3.x and GraphQL LSP 2.5.x
 date: 2020-09-21
-image: ./vscode-generated-schema.gif
+image: ./vscode-graphql-main.png
 ---
 
 There have been some _significant_ changes to the official [GraphQL Language Service)](https://www.npmjs.com/package/graphql-language-service) and [language server](https://www.npmjs.com/package/graphql-language-service-server) itself.
@@ -134,13 +134,11 @@ Does your framework or graphql implementation have fragments defined external to
 
 Almost _all_ graphql frameworks out there seem to use this method.
 
-IMHO, it's much better than importing fragments as variables into template strings, which breaks graphql language parsing for IDE implementations
+IMHO, it's much better than importing fragment strings from other variables, and passing them into template replacements, which breaks graphql language parsing for IDE implementations
 
 I decided to implement implicit fragment completion in a fashion that would transparently work with many patterns I've seen in the wild. The requirements for including your custom fragments are quite minimal.
 
-Bonus: `vscode-graphql` will append these fragments as needed whem executing operations. how about that!
-
-How did i get this working? Just include the fragments in the `documents` field in graphql config:
+How did we get this working? Just include the fragments in the `documents` field in graphql config:
 
 ```yml
 schema: "https://localhost"
@@ -172,7 +170,9 @@ const query = gql`
 `
 ```
 
-In the case of Gatsby, we just write all plugin-provided fragments to a cached fragments.graphql file.
+In the case of Gatsby, we just write all plugin-provided fragments to a cached fragments.graphql file. It will pick up all fragments defined across all files in the `documents` entry
+
+Bonus: `vscode-graphql` will append these fragments as needed when executing operations. how about that!
 
 
 ### Outline Support
@@ -198,10 +198,11 @@ The server has been improved to support `&` operator syntax, thanks Divyendu!
 
 So many more features we want to support, but find references/implementations is the last piece we need for the Language Server to be LSP complete.
 
-## New IDE family members!
+## New NeoVIM COC plugin!
 
-- vim coc
-- sublime graphql
+There is now an excellent coc.nvim plugin using the LSP Server
+
+https://github.com/felippepuhle/coc-graphql#coc-graphql
 
 ## `vscode-graphql` Specific Improvements
 
@@ -228,3 +229,7 @@ You can now provide `"vscode-graphql.showExecCodeLens": false,` to hide the "Exe
 ### Improved Highlighting
 
 We made some improvements to highlighting for comments, fragment definitions, and more!
+
+### Implicit Fragments
+
+When executing an operation, the full implicit fragments will automatically be added to the operation payload. This allows us to use the extension with Gatsby, and should also be a welcome improvement for users of Relay and other frameworks where fragments are re-used throughout the codebase

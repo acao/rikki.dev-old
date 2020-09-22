@@ -6,7 +6,7 @@ module.exports = {
         prismPreset: "prism-okaidia",
       },
     },
-    "gatsby-theme-blog-darkmode",
+    "gatsby-theme-blog-darkmode"
   ],
   // Customize your site metadata:
   siteMetadata: {
