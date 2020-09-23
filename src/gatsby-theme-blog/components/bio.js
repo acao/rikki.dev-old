@@ -58,6 +58,7 @@ const Bio = () => {
                   paddingRight: isFirst ? ".5rem" : 0,
                   paddingLeft: isFirst ? 0 : ".5rem",
                 }}
+                key={`social-${i}`}
                 href={s.url}
                 target="_new"
               >

@@ -6,6 +6,10 @@ import typography from "typography-theme-wordpress-2016"
 
 import "typeface-montserrat"
 
+const globalHeaderStyle = {
+   fontWeight: "normal"
+}
+
 export default merge(toTheme(typography), {
   useBorderBox: false,
   // @ts-ignore
@@ -19,8 +23,10 @@ export default merge(toTheme(typography), {
     monospace: `Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace`,
   },
   styles: {
-    h2: { fontWeight: "normal" },
-    h1: { fontWeight: "normal" },
-    pre: { margin: "0 0 2 0" },
+    h4: globalHeaderStyle,
+    h3: globalHeaderStyle,
+    h2: globalHeaderStyle,
+    h1: globalHeaderStyle,
+    pre: { margin: "0 0 2 0", borderRadius: 0 },
   },
 })
