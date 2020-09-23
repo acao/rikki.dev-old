@@ -26,7 +26,7 @@ export default merge(toTheme(typography), {
     h4: globalHeaderStyle,
     h3: globalHeaderStyle,
     h2: globalHeaderStyle,
-    h1: globalHeaderStyle,
+    h1: {...globalHeaderStyle, padding: "2rem 0"},
     pre: { margin: "0 0 2 0", borderRadius: 0 },
   },
 })

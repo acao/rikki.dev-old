@@ -4,25 +4,22 @@ import { jsx } from "theme-ui"
 import React from "react"
 import { css, Styled } from "theme-ui"
 import Header from "./header"
-
-// @ts-ignore
-import bgImage from "../../../content/assets/tile.jpg"
+import colors from "../../gatsby-plugin-theme-ui/colors"
 
 export default ({ children, location, title, ...props }) => (
   <Styled.root
     css={css({
-      backgroundRepeat: "repeat",
-      backgroundImage: `url(${bgImage})`,
       minHeight: "95vh",
       paddingTop: "3rem",
     })}
+    sx={{ backgroundColor: 'background'}}
   >
     <style>{`
     body { margin: 0; };
     `}</style>
     <section
       sx={{
-        backgroundColor: "background",
+        backgroundColor: "body",
         maxWidth: `container`,
         mx: `auto`,
         px: ["2rem", "2rem", "4rem"],
