@@ -9,6 +9,8 @@ const prismBackgroundBlue = `#001627`
 const lightBlue = `#66E0FF`
 const blueGray = `#18191a`
 const luxLavender = `rgb(147, 161, 219)`
+const luxLavenderDark = `rgb(62,68,94)`
+
 
 export default {
   initialColorMode: `dark`,
@@ -26,7 +28,9 @@ export default {
       secondary: blueGray,
     },
     light: {
-      primary: luxLavender,
+      primary: luxLavenderDark,
+      background: '#eee',
+      body: 'white'
     },
   },
 }
