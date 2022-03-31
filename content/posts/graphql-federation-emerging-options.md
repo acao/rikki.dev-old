@@ -1,5 +1,6 @@
 ---
 title: GraphQL Federation - emerging options!
+date: 2022-04-01
 ---
 
 This landscape is really growing, especially after the guild launched the new graphql stitching that allows you to build federation patterns.
