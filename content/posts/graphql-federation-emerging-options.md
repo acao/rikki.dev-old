@@ -15,8 +15,9 @@ If i missed any, [please open an issue here](https://github.com/acao/rikki.dev/i
 * a colleauge of mine launched another that I can’t find right now
 
 ## open source:
-* https://github.com/mercurius-js/mercurius/blob/master/docs/federation.md
-  * [nestjs + mercurius examples](https://docs.nestjs.com/graphql/federation#federation-with-mercurius) - (typescript)
+* [Mercurius](https://github.com/mercurius-js/mercurius/blob/master/docs/federation.md) - (typescript)
+  * [nestjs + mercurius examples](https://docs.nestjs.com/graphql/federation#federation-with-mercurius)
+* [GraphQL Tools Schema Stitching](https://github.com/gmac/schema-stitching-handbook) - (typescript) - (not to be confused with the old apollo stitching pattern pre-federation)
 * [Nautilus](https://github.com/nautilus/gateway_) (golang)
 * [bramble](https://movio.github.io/bramble) - (golang)
 * [ChilliCream](https://chillicream.com/docs/hotchocolate/distributed-schema/schema-federations) - (dotnet)
