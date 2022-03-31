@@ -9,7 +9,7 @@ export default () => (
   <Fragment>
     The development blog of Rikki Schulte.
     <br />
-    Gatsby.js brought me on to maintain developer tools like GraphiQL & the GraphQL LSP
+    I help maintain developer tools like GraphiQL & the GraphQL LSP. I work for ResearchGate and live in in Berlin, Germany.
     <br />
     Black Lives Matter!
   </Fragment>
