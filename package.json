@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@theme-ui/typography": "^0.3.0",
-    "gatsby": "2.23.11",
+    "gatsby": "4.25.7",
     "gatsby-theme-blog": "^2.0.0",
     "gatsby-theme-blog-darkmode": "^2.0.0",
     "react": "^16.12.0",
